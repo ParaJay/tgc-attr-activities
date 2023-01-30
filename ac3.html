@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Activity 3</title>
+	</head>
+
+    <body>
+        <form>
+            <h1>Appointment</h1>
+            <p>NOTE: We only have appointments from 09-02-2023 to 22-03-2023</p>
+            <br>
+            <p>Book an appointment below:</p>
+            <p>Date:</p>
+            <input type="date" name="date" min="2023-02-09" max="2023-03-22" required="true">
+            <br><br>
+            <input type="time" name="time" min="08:00" max="16:00" required="true">
+            <br><br>
+            <input placeholder="Notes">
+            <br>
+            <br>
+		    <input type="submit" value="Submit" onclick="bookAppointment()"></input>
+        </form>
+    </body>
+
+	<footer>
+		<br>
+        <a href="./index.html">Home</a>
+        |
+        <a href="https://github.com/ParaJay/">GitHub</a>
+	</footer>
+</html>

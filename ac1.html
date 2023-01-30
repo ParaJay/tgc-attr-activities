@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Activity 1</title>
+	</head>
+
+    <body>
+        <h1>Recycled Wordplay</h1>
+
+        <p id="quote"></p>
+
+        <button onclick="upvote()">Upvote</button>
+
+        <button onclick="downvote()">Downvote</button>
+
+        <button onclick="random()">Random</button>
+
+        <script>
+            var last = null;
+            var done = [];
+
+            const quotes = [
+                "I can see myself working in a mirror store",
+                "Ask me no questions, and I'll tell you no lies",
+                "A person with a sharp tongue will eventually cut themselves",
+                "A literalist takes things literally. A kleptomaniac takes things, literally",
+                "Before was was was, was was is",
+                "I've invented a new word! Plagiarism",
+                "A word in this sentence is misspelled",
+                "Time flies like an arrow. Fruit flies like a banana",
+                "I ordered an egg and a chicken on Amazon. I'll let you know",
+                "The past, the present, and the future walked into a bar. It was tense.",
+                "I googled how to start a wildfire, I got 48,500 matches",
+                "I'm a big fan of whiteboards. I find them quite re-markable.",
+                "Did you hear about these new reversible jackets? I'm excited to see how they turn out.",
+                "Don't trust atoms, they make up everything.",
+                "For Halloween we dressed up as almonds. Everyone thought we were nuts."
+            ];
+
+            window.onload = () => {
+                random();
+            }
+
+            function random() {
+                if(quotes.length == 0) {
+                    document.getElementById("quote").innerText = "no more :(";
+                } else {
+                    let i = Math.floor(Math.random() * (quotes.length - 1));
+
+                    let q = quotes[i];
+                    quotes.splice(i, 1);
+
+                    document.getElementById("quote").innerText = q;
+                }
+            }
+
+            function upvote() {
+                alert("you upvoted!");
+            }
+
+            function downvote() {
+                alert("you downvoted!");
+            }
+
+        </script>
+    </body>
+
+	<footer>
+        <br>
+        <a href="./index.html">Home</a>
+        |
+        <a href="https://github.com/ParaJay/">GitHub</a>
+	</footer>
+</html>
